@@ -29,6 +29,20 @@ namespace ModificadoresDeAcceso
                 Console.WriteLine("La CURP debe ser de 18 caracteres");
             }
 
+            Cuenta cuenta
+            = new Cuenta();
+            try
+            {
+                cuenta.Identificador = "12345678912345";
+                Console.WriteLine("Identificador : " + cuenta.Identificador);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("El Identificador debe tener entre 10 y 14 caracteres");
+            }
+
+            
+            Console.WriteLine("Saldo : " + cuenta.Saldo);
 
             Console.Read();
         }
